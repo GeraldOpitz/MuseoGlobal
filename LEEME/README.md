@@ -1,11 +1,10 @@
 ### Museo Global observaciones
 
 <h2 style="color:red">Observaciones </h2>
+
 * agregar siempre un readme en cada proyecto
 * Separar el proyecto de front y el de backend
-
 * trabajar en ramas diferentes, preguntarme como 
-
 * pendiente con los archivos a ignorar
 * agregar linter a proyecto de front 
 * variables y funciones en ingles 
