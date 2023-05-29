@@ -1,5 +1,5 @@
 const express = require('express');
-const conexion = require('./config/config');
+const connection = require('./config/config');
 const cors = require('cors');
 
 //Llamado a la variable de entorno
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 //Llamado a la conexión con la base de datos
-conexion();
+connection();
 const port = 3001;
 
 //Manejo de rutas

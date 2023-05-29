@@ -1,31 +1,31 @@
 const mongoose = require('mongoose');
 
 const artworkSchema = new mongoose.Schema({
-  nombre: {
+  name: {
     type: String,
     required: true
   },
-  autor: {
+  author: {
     type: String,
     required: true
   },
-  fechaCreacion: {
+  creationDate: {
     type: Date,
     required: true
   },
-  paisProcedencia: {
+  country: {
     type: String,
     required: true
   },
-  categoria: {
+  category: {
     type: String,
     required: true
   },
-  descripcion: {
+  description: {
     type: String,
     required: true
   },
-  foto: {
+  picture: {
     type: String,
     required: true
   }

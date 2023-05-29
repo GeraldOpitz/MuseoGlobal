@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const conexion = async() => {
+const connection = async() => {
     try {
         const DB_URI = process.env.DB_URI;
         if(!DB_URI) return "No se encontro variable de conexión con mongo";
@@ -12,4 +12,4 @@ const conexion = async() => {
         console.error('Conexión con MongoDB fallida', error);
     }
 }
-module.exports = conexion;
+module.exports = connection;
