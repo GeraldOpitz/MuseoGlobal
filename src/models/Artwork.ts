@@ -1,4 +1,4 @@
-import { Document, model, Schema } from 'mongoose';
+import { Document, model, Number, Schema } from 'mongoose';
 
 const artworkSchema = new Schema({
   name: {
@@ -10,8 +10,10 @@ const artworkSchema = new Schema({
     required: true,
   },
   creationDate: {
-    type: Date,
+    type: Number,
     required: true,
+    min: -800000,
+    max: 2023,
   },
   country: {
     type: String,
@@ -34,7 +36,7 @@ const artworkSchema = new Schema({
 export interface IArtwork extends Document {
   name: string;
   author: string;
-  creationDate: Date;
+  creationDate: Number;
   country: string;
   category: string;
   description: string;
