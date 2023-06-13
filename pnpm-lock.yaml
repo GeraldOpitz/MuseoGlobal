@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   cloudinary:
-    specifier: ^1.37.0
-    version: 1.37.0
+    specifier: ^1.37.1
+    version: 1.37.1
   cors:
     specifier: ^2.8.5
     version: 2.8.5
@@ -17,6 +17,9 @@ dependencies:
   express:
     specifier: ^4.18.2
     version: 4.18.2
+  mongodb:
+    specifier: ^5.6.0
+    version: 5.6.0
   mongoose:
     specifier: ^7.2.2
     version: 7.2.2
@@ -365,12 +368,12 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /cloudinary@1.37.0:
-    resolution: {integrity: sha512-hCAb3kU2nqjaHxDHxh+bi691A6LEuF68A2jHvYR5wDhDxx5qNRJLYqABbmxP6TQJriJd0Tq309fZvzBXkTW6sw==}
+  /cloudinary@1.37.1:
+    resolution: {integrity: sha512-zik0wsNm+4A3lDrS7SDPskKsKceM8MG+DBK7DWEhoQsHkLm/BdJbNWR6JtJCTGImnANi5Md4t3P+G6DZ+92gVg==}
     engines: {node: '>=0.6'}
     dependencies:
       cloudinary-core: 2.13.0(lodash@4.17.21)
-      core-js: 3.30.1
+      core-js: 3.30.2
       lodash: 4.17.21
       q: 1.5.1
     optionalDependencies:
@@ -414,8 +417,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /core-js@3.30.1:
-    resolution: {integrity: sha512-ZNS5nbiSwDTq4hFosEDqm65izl2CWmLz0hARJMyNQBgkUZMIF51cQiMvIQKA6hvuaeWxQDP3hEedM1JZIgTldQ==}
+  /core-js@3.30.2:
+    resolution: {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
     requiresBuild: true
     dev: false
 
@@ -957,6 +960,28 @@ packages:
       socks: 2.7.1
     optionalDependencies:
       saslprep: 1.0.3
+
+  /mongodb@5.6.0:
+    resolution: {integrity: sha512-z8qVs9NfobHJm6uzK56XBZF8XwM9H294iRnB7wNjF0SnY93si5HPziIJn+qqvUR5QOff/4L0gCD6SShdR/GtVQ==}
+    engines: {node: '>=14.20.1'}
+    peerDependencies:
+      '@aws-sdk/credential-providers': ^3.201.0
+      mongodb-client-encryption: '>=2.3.0 <3'
+      snappy: ^7.2.2
+    peerDependenciesMeta:
+      '@aws-sdk/credential-providers':
+        optional: true
+      mongodb-client-encryption:
+        optional: true
+      snappy:
+        optional: true
+    dependencies:
+      bson: 5.3.0
+      mongodb-connection-string-url: 2.6.0
+      socks: 2.7.1
+    optionalDependencies:
+      saslprep: 1.0.3
+    dev: false
 
   /mongoose@7.2.2:
     resolution: {integrity: sha512-JPBMTF+oYfLGVFWbHSZ/H+f1GajNanGLYH6c/P0nE3bNJfwGhX573vieGR0kNlNhj3cZk8WCPrnVsTNeUmFUag==}

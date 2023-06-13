@@ -1,12 +1,13 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import connection from './config/database';
 import cors from 'cors';
 import config from './config/config';
 import multer from 'multer';
 import cloudinary from 'cloudinary';
-
+import connection from './config/database';
 import artworkRoutes from './routes/artworkRoutes';
+
+
 
 const app: express.Application = express();
 app.use(express.json());
