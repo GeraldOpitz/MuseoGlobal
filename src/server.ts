@@ -6,8 +6,7 @@ import multer from 'multer';
 import cloudinary from 'cloudinary';
 import connection from './config/database';
 import artworkRoutes from './routes/artworkRoutes';
-
-
+import userRoutes from './routes/userRoutes';
 
 const app: express.Application = express();
 app.use(express.json());
@@ -62,6 +61,7 @@ app.post('/api/upload', upload.single('image'), (req, res) => {
 app.set('port', config.PORT);
 
 // Manejo de rutas
-app.use('/api/artworks/', artworkRoutes);
+app.use('/api/artworks', artworkRoutes);
+app.use('/api/users', userRoutes);
 
 export default app;
