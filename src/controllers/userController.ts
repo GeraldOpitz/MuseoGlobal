@@ -47,6 +47,16 @@ export const login: RequestHandler = async (req: Request, res: Response) => {
   }
 };
 
+export const logout: RequestHandler = async (req: Request, res: Response) => {
+  try {
+    localStorage.removeItem('token');
+    res.json({ message: 'Sesión cerrada exitosamente' });
+  } catch (error) {
+    console.error('Error al cerrar la sesión:', error);
+    return res.status(500).json({ error: 'Error al cerrar la sesión' });
+  }
+};
+
 export const getAllUsers: RequestHandler = async (req: Request, res: Response) => {
   try {
     const users: IUser[] = await User.find();
